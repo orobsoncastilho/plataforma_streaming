@@ -8,14 +8,13 @@
 </head>
 <body>
 
-  <div id="intro" class="intro-container">
-    <video id="introVideo" autoplay muted playsinline>
-      <source src="intro/intro2.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-  </div>
+  <!-- Tela de introdução com GIF da logo -->
+<div id="intro" class="intro-container">
+  <img src="intro/3.gif" alt="Introdução CamilaFlix" />
+</div>
 
-  <div id="siteContent" style="display: none;">
+<div id="siteContent" style="display: none; opacity: 0; transition: opacity 1s ease;">
+  <!-- conteúdo do site -->
     <h1><img src="icons/CAMILAFLIX-14-04-2025.png" alt="logo"></h1>
     <div class="galeria">
       <a href="https://drive.google.com/file/d/1kDdcMcQrOiS2ruqN-2BGwGstds8iy-Uw/view?usp=sharing">
@@ -30,11 +29,21 @@
   </div>
 
   <script>
-    const video = document.getElementById('introVideo');
-    video.addEventListener('ended', () => {
-      document.getElementById('intro').style.display = 'none';
-      document.getElementById('siteContent').style.display = 'block';
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const intro = document.getElementById('intro');
+        const site = document.getElementById('siteContent');
+        
+        intro.style.display = 'none';
+        site.style.display = 'block';
+  
+        setTimeout(() => {
+          site.style.opacity = '1';
+        }, 50); // pequeno atraso pra garantir a transição
+      }, 3000); // duração do GIF em milissegundos
     });
   </script>
+  
+  
 </body>
 </html>

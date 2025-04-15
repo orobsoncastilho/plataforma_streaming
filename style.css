@@ -213,3 +213,15 @@ video:fullscreen {
   max-width: 100%;
   max-height: 100%;
 }
+
+#siteContent.show {
+  display: block;
+  opacity: 1;
+}
+
+#siteContent {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
