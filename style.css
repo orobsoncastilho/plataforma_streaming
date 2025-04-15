@@ -16,7 +16,7 @@ body {
   
   .container {
     padding: 20px;
-    position: relative; /* Adiciona isso aqui */
+    position: relative;
   }
 
   a:link {
@@ -67,12 +67,11 @@ body {
   .galeria {
     width: 60%;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 20px;
-    padding: 20px;
     text-decoration: none;
     outline: none;
+    margin: auto;
   }
   
   .galeria img {
@@ -92,7 +91,6 @@ body {
     }
     .galeria {
       width: 70%;
-      /* margin-top: -10px; */
       margin: auto;
     }
 
@@ -172,7 +170,6 @@ body {
     background-color: rgba(255, 0, 0, 0.9);
   }
   
-  /* Quando o vídeo estiver em tela cheia */
 video:-webkit-full-screen {
   width: 100vw;
   height: 100vh;
@@ -193,9 +190,26 @@ video:fullscreen {
   height: 100vh;
 }
 
-/* Esconde o botão de voltar quando estiver em tela cheia */
 :fullscreen .botao-voltar,
 :-webkit-full-screen .botao-voltar,
 :-moz-full-screen .botao-voltar {
   display: none;
+}
+
+.intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.intro-container video {
+  max-width: 100%;
+  max-height: 100%;
 }
