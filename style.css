@@ -1,0 +1,191 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  img{
+    width: 20rem;
+  }
+  
+  .container {
+    padding: 20px;
+    position: relative; /* Adiciona isso aqui */
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  p {
+    color: white;
+  }
+  
+  video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .controles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  button, input[type="range"] {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+  
+  #tempo {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .galeria {
+    width: 90%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .galeria img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .galeria {
+      width: 70%;
+      margin-top: -10px;
+    }
+
+    .galeria img {
+      width: 58%;
+    }
+  
+    .controles {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    button, input[type="range"] {
+      width: 90%;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .galeria {
+      width: 85%;
+    }
+
+    .galeria img {
+      width: 100%;
+    }
+  
+    video {
+      width: 100%;
+    }
+  
+    button, input[type="range"] {
+      font-size: 0.9rem;
+    }
+  
+    #tempo {
+      font-size: 12px;
+    }
+  }
+  .voltar-catalogo {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .voltar-catalogo:hover {
+    background-color: #ff2222;
+  }
+  .botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 68, 68, 0.9);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .botao-voltar:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+  }
+  
+  /* Quando o vídeo estiver em tela cheia */
+video:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+video:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+video:-ms-fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+video:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Esconde o botão de voltar quando estiver em tela cheia */
+:fullscreen .botao-voltar,
+:-webkit-full-screen .botao-voltar,
+:-moz-full-screen .botao-voltar {
+  display: none;
+}
