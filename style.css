@@ -25,6 +25,8 @@ body {
 
   p {
     color: white;
+    width: 50%;
+    margin-left: 25%;
   }
   
   video {
@@ -63,7 +65,7 @@ body {
   }
   
   .galeria {
-    width: 90%;
+    width: 60%;
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: center;
@@ -90,7 +92,8 @@ body {
     }
     .galeria {
       width: 70%;
-      margin-top: -10px;
+      /* margin-top: -10px; */
+      margin: auto;
     }
 
     .galeria img {
@@ -115,8 +118,15 @@ body {
 
     .galeria img {
       width: 100%;
+      margin: auto;
     }
-  
+   
+    p {
+      font-size: 70%;
+      width: 90%;
+      margin: auto;
+    }
+
     video {
       width: 100%;
     }
